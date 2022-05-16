@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "singularName": "usuario",
+    "pluralName": "usuarios",
+    "displayName": "usuario"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "recetas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::receta.receta",
+      "mappedBy": "usuario"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "apellidos": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    }
+  }
+}
